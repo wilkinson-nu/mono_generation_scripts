@@ -34,9 +34,6 @@ cp ${INPUTS_DIR}/${TUNE}_v320_splines.xml.gz .
 ## Get the noFSI override
 cp -r ${INPUTS_DIR}/${TUNE}_CONFIG .
 
-## Get the flux file
-cp ${INPUTS_DIR}/${FLUX_FILE} .
-
 ## Need to set the GXMLPATH I think
 echo "Starting gevgen..."
 shifter -V ${PWD}:/output --entrypoint gevgen -n ${NEVENTS} -t ${TARG} -p ${NU_PDG} \

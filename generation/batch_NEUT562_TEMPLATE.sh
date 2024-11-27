@@ -35,7 +35,6 @@ echo "${THIS_SEED} $((THIS_SEED+1)) $((THIS_SEED+2)) $((THIS_SEED+3)) $((THIS_SE
 export RANFILE=ranfile.txt
 
 ## Sort out the inputs
-cp ${INPUTS_DIR}/${FLUX_FILE} .
 cp ${INPUTS_DIR}/${INCARD} .
 sed -i "s/_NU_PDG_/${NU_PDG}/g" ${INCARD}
 sed -i "s/_E_MONO_/${E_MONO}/g" ${INCARD}

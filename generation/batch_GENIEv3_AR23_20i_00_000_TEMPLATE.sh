@@ -31,9 +31,6 @@ cd ${TEMPDIR}
 ## Get the splines that are now needed...
 cp ${INPUTS_DIR}/${TUNE}_v340_splines.xml.gz .
 
-## Get the flux file
-cp ${INPUTS_DIR}/${FLUX_FILE} .
-
 echo "Starting gevgen..."
 shifter -V ${PWD}:/output --entrypoint gevgen -n ${NEVENTS} -t ${TARG} -p ${NU_PDG} \
 	--cross-sections ${TUNE}_v340_splines.xml.gz \

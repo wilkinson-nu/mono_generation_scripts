@@ -30,9 +30,6 @@ echo "Moving to SCRATCH: ${TEMPDIR}"
 mkdir ${TEMPDIR}
 cd ${TEMPDIR}
 
-## Get the flux file
-cp ${INPUTS_DIR}/${FLUX_FILE} .
-
 ## Get and modify the card
 cp ${INPUTS_DIR}/${INCARD} .
 sed -i "s/_NU_PDG_/${NU_PDG}/g" ${INCARD}

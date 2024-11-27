@@ -31,9 +31,6 @@ cd ${TEMPDIR}
 ## Get the splines that are now needed...
 cp ${INPUTS_DIR}/${TUNE}_v340_splines.xml.gz .
 
-## Get the flux file
-cp ${INPUTS_DIR}/${FLUX_FILE} .
-
 ## Deal with the messenger issues...
 cp -r ${INPUTS_DIR}/xml_override .
 
@@ -49,7 +46,8 @@ shifter -V ${PWD}:/output --entrypoint /bin/sh -c "export GXMLPATH=xml_override;
 	PrepareGENIE -i $OUTFILE -m ${E_MONO} \
 	-t $TARG -o ${OUTFILE/.root/_NUIS.root} &> /dev/null"
 
-shifter -V ${PWD}:/output --entrypoint nuisflat -f GenericVectors -i GENIE:${OUTFILE/.root/_NUIS.root} -o ${OUTFILE/.root/_NUISFLAT.root} -q "nuisflat_SaveSignalFlags=false"
+shifter -V ${PWD}:/output --entrypoint nuisflat -f GenericVectors -i GENIE:${OUTFILE/.root/_NUIS.root} -o ${OUTFILE/.root/_NUISFLAT.root} \
+	-q "nuisflat_SaveSignalFlags=false" &> /dev/null
 echo "Complete"
 
 ## Copy back the important files
