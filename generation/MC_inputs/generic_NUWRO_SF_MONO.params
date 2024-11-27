@@ -9,6 +9,7 @@ random_seed= _THIS_SEED_   // 0 - use time(NULL) as a seed for random number gen
 # Beam specification 
 beam_type = 0       // mono
 beam_particle = _NU_PDG_    // neutrino PDG 
+beam_energy= _E_MONO_
 
 # Target specification
 @target/_SHORT_TARG_.txt
