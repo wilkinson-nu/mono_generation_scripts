@@ -3,7 +3,7 @@
 #SBATCH --account=dune
 #SBATCH --qos=shared
 #SBATCH --constraint=cpu
-#SBATCH --time=1440
+#SBATCH --time=2880
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --mem=4GB

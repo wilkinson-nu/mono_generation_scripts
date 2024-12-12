@@ -3,7 +3,7 @@
 #SBATCH --account=dune
 #SBATCH --qos=shared
 #SBATCH --constraint=cpu
-#SBATCH --time=1440
+#SBATCH --time=2880
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --mem=4GB
@@ -18,7 +18,7 @@ OUTFILE=__OUTFILE__
 
 ## Output file name
 TUNE=CRPA21_04a_00_000
-NEVENTS=1000000
+NEVENTS=__NEVENTS__
 E_MONO=__E_MONO__
 INPUTS_DIR=${PWD}/MC_inputs
 
